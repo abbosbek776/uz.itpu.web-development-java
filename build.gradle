@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'uz.itpu.s4'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/log4j/log4j
+    implementation 'log4j:log4j:1.2.17'
+
+}
+
+test {
+    useJUnitPlatform()
+}
