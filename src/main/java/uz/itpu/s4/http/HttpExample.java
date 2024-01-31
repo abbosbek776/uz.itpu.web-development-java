@@ -29,25 +29,11 @@ public class HttpExample {
 
   // Sync
   private static String sendSyncHttpGetRequest(String url) throws Exception {
-    HttpClient httpClient = HttpClient.newHttpClient();
-    HttpRequest request = HttpRequest.newBuilder()
-        .uri(URI.create(url))
-        .GET()
-        .build();
-
-    HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-    return response.body();
+    return null;
   }
 
   // Async
   private static CompletableFuture<String> sendAsyncHttpGetRequest(String url) {
-    HttpClient httpClient = HttpClient.newHttpClient();
-    HttpRequest request = HttpRequest.newBuilder()
-        .uri(URI.create(url))
-        .GET()
-        .build();
-
-    return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-        .thenApply(HttpResponse::body);
+    return null;
   }
 }
