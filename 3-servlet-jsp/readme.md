@@ -21,6 +21,15 @@
 19. click on [http://localhost:8080/3-servlet-jsp](http://localhost:8080/3-servlet-jsp)
 20. click on [http://localhost:8080/3-servlet-jsp/FrontController](http://localhost:8080/3-servlet-jsp/FrontController)
 
-
+---
 Additional
 Try to run and analyze https://github.com/AndreiRohau/MavenServlet/tree/master
+---
+
+Issues:
+1. /_FrontController_ not opens _home_
+
+- Go to run configuration and add maven install in before lunch section
+![img_15.png](readme-static/img_15.png)
+- enter "install" ![img_16.png](readme-static/img_16.png) click Ok
+- put maven above build ![img_17.png](readme-static/img_17.png)
