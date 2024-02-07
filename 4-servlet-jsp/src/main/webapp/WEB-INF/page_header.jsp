@@ -27,6 +27,7 @@
     <body onload="startTime()">
         <h2>This is a header which was included from page_header.jsp</h2>
         <br/>
+        <p id="time-description">We achieve this by using javascript functions, that defined in page_header.jsp -> head -> script</p>
         <p id="current">Time loading..</p>
         <br/>
     </body>

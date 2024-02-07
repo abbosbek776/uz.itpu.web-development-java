@@ -23,7 +23,7 @@ public class Sum implements Calculator {
                     .append("=")
                     .append(number1 + number2);
             req.setAttribute("result", sb);
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
+//            req.getRequestDispatcher("index.jsp").forward(req, resp);
         } catch (Exception e) {
             throw new MyCustomException(e);
         }
