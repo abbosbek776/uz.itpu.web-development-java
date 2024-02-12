@@ -3,10 +3,6 @@
 <%@ page import="java.util.Collections" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%
-    List<String> cart = Optional.ofNullable((List<String>) session.getAttribute("cart")).orElse(Collections.emptyList());
-    int cartSize = cart.size();
-%>
 
 <html>
 <head>
@@ -27,19 +23,7 @@
 
             <!-- Display cart items here -->
             <ul>
-                <%
-                    for (String productId : cart) {
-                        String glyph = " ";
-                        if (productId.equals("1")) {
-                            glyph = "🥤";
-                        } else {
-                            glyph = "🥛";
-                        }
-                %>
-                <li><span class="glyph"><%= glyph %></span> Product <%= productId %></li>
-                <%
-                    }
-                %>
+
             </ul>
         </section>
     </main>
