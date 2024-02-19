@@ -39,33 +39,44 @@ public class AuthorizationFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 
-		HttpServletRequest httpRequest = (HttpServletRequest) request;
+		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 		HttpServletResponse httpServletResponse = (HttpServletResponse) response;
 
 		// TODO: Add your code here.
-		String userRole = null;
-		String command = httpRequest.getParameter(COMMAND_PARAMETER_NAME);
-		HttpSession session = httpRequest.getSession();
-		if (nonNull(session)) {
-			userRole = (String) session.getAttribute(USER_ROLE_ATTRIBUTE_NAME);
+		String command = httpServletRequest.getParameter(COMMAND_PARAMETER_NAME);
+		HttpSession session = httpServletRequest.getSession();
+		String userRole = isNull(session) ? null : (String) session.getAttribute(USER_ROLE_ATTRIBUTE_NAME);
+
+		if (isAnonymousOrGuest(session, userRole)
+				&& LOGIN_COMMAND.equalsIgnoreCase(command)) {
+			proceed(request, response, chain);
+
+		} else if (hasRoleAndCommand(userRole, command)) {
+			if (LOGOUT_COMMAND.equalsIgnoreCase(command)) {
+				proceed(request, response, chain);
+
+			} else if (isCommandAllowedForRole(command, userRole)) {
+				proceed(request, response, chain);
+			}
 		}
 
-		if (isNull(session) || isNull(userRole)) {
-			if (LOGIN_COMMAND.equalsIgnoreCase(command)) {
-				chain.doFilter(request, response);
-			}
-		} else {
-			if (nonNull(userRole)) {
-				if (LOGOUT_COMMAND.equalsIgnoreCase(command)) {
-					chain.doFilter(request, response);
-				} else if (nonNull(userRole)
-						&& nonNull(command)
-						&& nonNull(roleCommands.get(userRole))
-						&& roleCommands.get(userRole).contains(command)) {
-					chain.doFilter(request, response);
-				}
-			}
-		}
 		httpServletResponse.sendError(403);
+	}
+
+	private void proceed(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		chain.doFilter(request, response);
+	}
+
+	private boolean hasRoleAndCommand(String userRole, String command) {
+		return nonNull(userRole) && nonNull(command);
+	}
+
+	private boolean isAnonymousOrGuest(HttpSession session, String userRole) {
+		return isNull(session) || isNull(userRole);
+	}
+
+	private boolean isCommandAllowedForRole(String command, String userRole) {
+		return nonNull(roleCommands.get(userRole))
+				&& roleCommands.get(userRole).contains(command);
 	}
 }
