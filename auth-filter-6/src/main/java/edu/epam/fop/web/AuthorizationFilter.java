@@ -42,6 +42,9 @@ public class AuthorizationFilter implements Filter {
 		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 		HttpServletResponse httpServletResponse = (HttpServletResponse) response;
 
+		// optional design with isAllowedProceeding
+//		boolean isAllowedProceeding = false;
+
 		// TODO: Add your code here.
 		String command = httpServletRequest.getParameter(COMMAND_PARAMETER_NAME);
 		HttpSession session = httpServletRequest.getSession();
@@ -50,17 +53,26 @@ public class AuthorizationFilter implements Filter {
 		if (isAnonymousOrGuest(session, userRole)
 				&& LOGIN_COMMAND.equalsIgnoreCase(command)) {
 			proceed(request, response, chain);
+//			isAllowedProceeding = true;
 
 		} else if (hasRoleAndCommand(userRole, command)) {
 			if (LOGOUT_COMMAND.equalsIgnoreCase(command)) {
 				proceed(request, response, chain);
+//				isAllowedProceeding = true;
 
 			} else if (isCommandAllowedForRole(command, userRole)) {
 				proceed(request, response, chain);
+//				isAllowedProceeding = true;
 			}
 		}
 
 		httpServletResponse.sendError(403);
+
+//		if (isAllowedProceeding) {
+//			proceed(request, response, chain);
+//		} else {
+//			httpServletResponse.sendError(403);
+//		}
 	}
 
 	private void proceed(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
