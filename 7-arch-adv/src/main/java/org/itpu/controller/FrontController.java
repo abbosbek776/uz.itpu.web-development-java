@@ -1,6 +1,7 @@
 package org.itpu.controller;
 
 import org.itpu.model.GeneralModel;
+import org.itpu.model.Model;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +13,7 @@ import static java.util.Objects.nonNull;
 public class FrontController extends HttpServlet {
     public static final Logger LOGGER = Logger.getLogger(FrontController.class.getName());
 
-    private GeneralModel model;
+    private Model model;
 
     @Override
     public void init() {
