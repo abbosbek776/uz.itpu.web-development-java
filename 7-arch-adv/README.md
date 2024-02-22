@@ -1,9 +1,9 @@
 MVC
 
-Controller - FrontController
-Model - GeneralModel
-View - index.jsp
+- Controller - FrontController
+- Model - GeneralModel
+- View - index.jsp
 
 
-Enter [hi] or [buy]
-Check vocabulary in class Dao
+- Enter [hi] or [bye]
+- Check vocabulary in class Dao
