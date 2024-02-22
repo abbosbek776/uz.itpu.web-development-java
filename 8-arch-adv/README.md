@@ -1,6 +1,6 @@
 ERD
 ---
-Find 2 exercises in the bottom of the document.
+Find 3 exercises in the bottom of the document.
 ---
 
 Note existance of different types of notations
@@ -32,6 +32,7 @@ SUM UP
 
 ![img_8.png](pics/img_8.png)
 
+---
 EXERCISE 1
 ---
 University 
@@ -45,11 +46,13 @@ University
 
 source [link](https://www.guru99.com/er-diagram-tutorial-dbms.html#how-to-create-an-entity-relationship-diagram-erd)
 
+---
 EXERCISE 2
 ---
 
 Look through an example of a complicated ERD on University management system [LINK](https://vertabelo.com/blog/er-diagram-for-a-university-database/)
 
+---
 EXERCISE 3
 ---
 Manufacturer
