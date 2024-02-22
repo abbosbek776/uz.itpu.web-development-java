@@ -2,7 +2,6 @@ ERD
 ---
 Find 2 exercises in the bottom of the document.
 ---
-![img.png](pics/img.png)
 
 Note existance of different types of notations
 ---
