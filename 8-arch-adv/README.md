@@ -2,7 +2,7 @@ ERD
 ---
 Find 2 exercises in the bottom of the document.
 ---
-![img.png](img.png)
+![img.png](pics/img.png)
 
 Note existance of different types of notations
 ---
@@ -10,28 +10,28 @@ Note existance of different types of notations
 Cardinality types notations
 ---
 
-![img_1.png](img_1.png)
+![img_1.png](pics/img_1.png)
 
-![img_2.png](img_2.png)
+![img_2.png](pics/img_2.png)
 
 Notation with Cardinality
 ---
 
-![img_3.png](img_3.png)
+![img_3.png](pics/img_3.png)
 
-![img_4.png](img_4.png)
+![img_4.png](pics/img_4.png)
 
-![img_5.png](img_5.png)
+![img_5.png](pics/img_5.png)
 
-![img_6.png](img_6.png)
+![img_6.png](pics/img_6.png)
 
-![img_7.png](img_7.png)
+![img_7.png](pics/img_7.png)
 
 
 SUM UP
 ---
 
-![img_8.png](img_8.png)
+![img_8.png](pics/img_8.png)
 
 EXERCISE 1
 ---
@@ -42,7 +42,7 @@ University
 - Each course is taught by a single Professor. 
 - To maintain instruction quality, a Professor can deliver only one course
 
-![img_10.png](img_10.png)
+![img_10.png](pics/img_10.png)
 
 source [link](https://www.guru99.com/er-diagram-tutorial-dbms.html#how-to-create-an-entity-relationship-diagram-erd)
 
@@ -71,7 +71,7 @@ ERD Answer
 
 Diagram
 ---
-![img_9.png](img_9.png)
+![img_9.png](pics/img_9.png)
 
 source [link](https://opentextbc.ca/dbdesign01/back-matter/appendix-b-erd-exercises/)
 
