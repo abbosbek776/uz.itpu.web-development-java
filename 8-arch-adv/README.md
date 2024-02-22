@@ -56,6 +56,7 @@ Look through an example of a complicated ERD on University management system [LI
 EXERCISE 3
 ---
 Manufacturer
+
 A manufacturing company produces products. The following product information is stored: product name, product ID and quantity on hand. These products are made up of many components. Each component can be supplied by one or more suppliers. The following component information is kept: component ID, name, description, suppliers who supply them, and products in which they are used. Use Figure B.1 for this exercise.
 
 Create an ERD to show how you would track this information.
