@@ -19,7 +19,7 @@ public class LogIn implements Command {
 //        isLogged = userService.logIn(login, password);
 
         if (isLogged) {
-            req.getSession(true).setAttribute(IS_LOGGED, isLogged);
+            req.getSession(true).setAttribute(ISLOGGED, isLogged);
         }
 
         req.getRequestDispatcher("index.jsp").forward(req, resp);

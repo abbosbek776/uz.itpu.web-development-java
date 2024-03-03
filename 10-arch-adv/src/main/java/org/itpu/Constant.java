@@ -18,7 +18,7 @@ public class Constant {
             PASSWORD1 = "password1",
             PASSWORD2 = "password2",
 
-            IS_LOGGED = "isLogged",
+            ISLOGGED = "isLogged",
             LOG_OUT = "log-out"
     ;
 }
