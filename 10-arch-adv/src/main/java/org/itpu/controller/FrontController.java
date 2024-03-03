@@ -40,9 +40,8 @@ public class FrontController extends HttpServlet {
     private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("msg", "my cmd");
 
-        final String commandName = getAttribute(req, COMMAND);
-
-        Command command = cammandMap.get(commandName);
+        final String commandName = req.getParameter(COMMAND);
+        final Command command = cammandMap.get(commandName);
 
         if (command == null) {
             req.setAttribute(INFO, "NO COMMAND");
@@ -50,9 +49,5 @@ public class FrontController extends HttpServlet {
         } else {
             command.run(req, resp);
         }
-    }
-
-    private String getAttribute(HttpServletRequest req, String attributeName) {
-        return req.getParameter(attributeName);
     }
 }
