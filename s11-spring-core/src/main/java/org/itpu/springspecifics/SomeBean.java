@@ -3,7 +3,6 @@ package org.itpu.springspecifics;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +10,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-@PropertySource("classpath:/application.properties")
 @Scope("singleton")
 public class SomeBean implements InitializingBean, DisposableBean {
 
