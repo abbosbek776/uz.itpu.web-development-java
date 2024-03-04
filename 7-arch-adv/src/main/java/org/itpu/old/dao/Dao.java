@@ -1,4 +1,4 @@
-package org.itpu.dao;
+package org.itpu.old.dao;
 
 import java.util.HashMap;
 import java.util.Map;

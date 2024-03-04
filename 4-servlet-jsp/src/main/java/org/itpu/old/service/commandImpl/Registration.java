@@ -1,6 +1,6 @@
-package org.itpu.service.commandImpl;
+package org.itpu.old.service.commandImpl;
 
-import org.itpu.service.Command;
+import org.itpu.old.service.Command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

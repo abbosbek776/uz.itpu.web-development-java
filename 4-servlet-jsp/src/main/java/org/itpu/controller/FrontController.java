@@ -1,9 +1,9 @@
 package org.itpu.controller;
 
 import org.itpu.exception.MyCustomException;
-import org.itpu.service.Calculator;
-import org.itpu.service.calculatorImpl.Subtract;
-import org.itpu.service.calculatorImpl.Sum;
+import org.itpu.old.service.Calculator;
+import org.itpu.old.service.calculatorImpl.Subtract;
+import org.itpu.old.service.calculatorImpl.Sum;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

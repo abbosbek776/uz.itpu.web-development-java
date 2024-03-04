@@ -1,4 +1,4 @@
-package org.itpu.service;
+package org.itpu.old.service;
 
 import org.itpu.exception.MyCustomException;
 

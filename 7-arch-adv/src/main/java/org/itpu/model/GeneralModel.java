@@ -1,6 +1,6 @@
 package org.itpu.model;
 
-import org.itpu.dao.Dao;
+import org.itpu.old.dao.Dao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
