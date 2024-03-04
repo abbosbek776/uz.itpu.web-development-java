@@ -3,8 +3,8 @@ package org.itpu.springspecifics;
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Component;
 
-//@Configuration
-@Component
+@Configuration
+//@Component
 @ComponentScan("org.itpu.springspecifics")
 @PropertySource("classpath:/application.properties")
 public class SpringSpecificsMain {
