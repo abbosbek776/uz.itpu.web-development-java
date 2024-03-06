@@ -25,52 +25,56 @@ public class SpringSpecificsMain {
 
         detectorBean.detect();
 
+
+        configurationVsComponent(context);
+
         System.out.println("--------------------------------------------------------------");
-
-
-//        configurationVsComponent(context);
-
 
         // this will release resources
         context.registerShutdownHook();
+        context.close();
     }
 
-    @Bean(initMethod="customInit")
+    @Bean(initMethod="customInit", destroyMethod="customDestroy")
     public DetectorBean detectorBean() {
         return new DetectorBean();
     }
 
-//    private static void configurationVsComponent(AnnotationConfigApplicationContext context) {
-//        Object customBean1a = context.getBean("customBean");
-//        Object customBean1b = context.getBean("customBean");
-//        Object customBean2a = context.getBean("customBeanTwo");
-//        Object customBean2b = context.getBean("customBeanTwo");
-//
-//        if (SpringSpecificsMain.class.isAnnotationPresent(Configuration.class)) {
-//            System.out.println("@Configuration");
-//            assert customBean1a == customBean1b;
-//            assert customBean2a == customBean2b;
-//
-//            assert customBean1b == customBean2a;
-//
-//        } else if (SpringSpecificsMain.class.isAnnotationPresent(Component.class)) {
-//            System.out.println("@Component");
-//            assert customBean1a == customBean1b;
-//            assert customBean2a == customBean2b;
-//
-//            assert customBean1b != customBean2a;
-//        }
-//    }
-//
-//    @Bean
-//    public Object customBean() {
-//        return new Object();
-//    }
-//
-//    @Bean
-//    public Object customBeanTwo() {
-//        return customBean();
-//    }
+    private static void configurationVsComponent(AnnotationConfigApplicationContext context) {
+        System.out.println();
+        Object customBean1a = context.getBean("customBean");
+        Object customBean1b = context.getBean("customBean");
+        Object customBean2a = context.getBean("customBeanTwo");
+        Object customBean2b = context.getBean("customBeanTwo");
+
+        if (SpringSpecificsMain.class.isAnnotationPresent(Configuration.class)) {
+            System.out.println("SpringSpecificsMain.class annotated with @Configuration");
+            System.out.println("customBean is the SAME as customBeanTwo");
+            assert customBean1a == customBean1b;
+            assert customBean2a == customBean2b;
+
+            assert customBean1b == customBean2a;
+
+        } else if (SpringSpecificsMain.class.isAnnotationPresent(Component.class)) {
+            System.out.println("SpringSpecificsMain.class annotated with @Component");
+            System.out.println("customBean is NOT the SAME as customBeanTwo");
+            assert customBean1a == customBean1b;
+            assert customBean2a == customBean2b;
+
+            assert customBean1b != customBean2a;
+        }
+        System.out.println();
+    }
+
+    @Bean
+    public Object customBean() {
+        return new Object();
+    }
+
+    @Bean
+    public Object customBeanTwo() {
+        return customBean();
+    }
 
     /*
     @Configuration vs @Component

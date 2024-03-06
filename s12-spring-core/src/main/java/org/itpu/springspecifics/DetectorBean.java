@@ -60,8 +60,9 @@ public class DetectorBean  implements InitializingBean, DisposableBean, Applicat
 
     public void detect() {
         System.out.println();
-        System.out.println("step-7 - keep patience and watch logs");
+        System.out.println("working-0 - keep patience and watch logs");
         System.out.println("propVal1 = " + propVal1 + " ... propVal2 = " + propVal2);
+        System.out.println();
     }
 
     @PreDestroy
@@ -73,6 +74,11 @@ public class DetectorBean  implements InitializingBean, DisposableBean, Applicat
     @Override
     public void destroy() throws Exception {
         System.out.println("step-destroy-2 - DisposableBean # destroy()");
+        printPropsIfSet();
+    }
+
+    public void customDestroy() {
+        System.out.println("step-destroy-3 - customDestroy()");
         printPropsIfSet();
     }
 
