@@ -55,13 +55,13 @@ public class DetectorBean  implements InitializingBean, DisposableBean, Applicat
 
     public void customInit() {
         System.out.println("step-6 - customInit");
-        System.out.println("propVal1 = " + propVal1 + " ... propVal2 = " + propVal2);
+        printPropsIfSet();
     }
 
     public void detect() {
         System.out.println();
         System.out.println("step-7 - keep patience and watch logs");
-        printPropsIfSet();
+        System.out.println("propVal1 = " + propVal1 + " ... propVal2 = " + propVal2);
     }
 
     @PreDestroy
