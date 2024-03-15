@@ -4,6 +4,14 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 
+/*
+employees table:
+employee_id BigNum
+fName varchar2
+lName varchar2
+yearsExperience Num
+
+ */
 @Entity
 @Table(name = "employees")
 public class Employee implements Serializable {
@@ -24,6 +32,9 @@ public class Employee implements Serializable {
 
     @Transient
     private Double totalCompensation;
+
+    @OneToOne(mappedBy = "employee")
+    private Address address;
 
     public Employee() {
     }
@@ -75,4 +86,11 @@ public class Employee implements Serializable {
         this.totalCompensation = totalCompensation;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }

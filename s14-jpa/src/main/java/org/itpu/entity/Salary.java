@@ -52,6 +52,20 @@ public class Salary implements Serializable {
         this.activeFlag = activeFlag;
     }
 
+    @Override
+    public String toString() {
+        return "Salary{" +
+                "id=" + id +
+                ", company=" + company +
+                ", level=" + level +
+                ", bonusPercentage=" + bonusPercentage +
+                ", startingSalary=" + startingSalary +
+                ", currentSalary=" + currentSalary +
+                ", activeFlag=" + activeFlag +
+                ", title='" + title + '\'' +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

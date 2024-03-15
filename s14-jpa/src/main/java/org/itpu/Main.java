@@ -6,6 +6,8 @@ import jakarta.persistence.Persistence;
 import jakarta.persistence.PersistenceContext;
 import org.itpu.entity.Salary;
 
+import java.util.List;
+
 public class Main {
 
     @PersistenceContext
@@ -26,9 +28,17 @@ public class Main {
 
         Salary salary1 = entityManager.find(Salary.class, 1L);
 
-        System.out.println(salary1);
+        System.out.println("salary1 = " + salary1.hashCode() + " = " + salary1);
 
         System.out.println("pause");
+
+        entityManager.clear();
+
+        Salary salary0 = entityManager.find(Salary.class, 1L);
+
+        System.out.println("salary0 = " + salary0.hashCode() + " = " + salary0);
+
+
 
         entityManager.close();
         entityManagerFactory.close();
@@ -40,9 +50,13 @@ public class Main {
 
         Salary salary2 = entityManager2.find(Salary.class, 1L);
 
-        System.out.println(salary2);
-        System.out.println("pause");
+        if (salary2 != null) {
+            System.out.println("salary2 = " + salary2.hashCode() + " = " + salary2);
+        }
 
+        List<Salary> resultList = entityManager2.createNativeQuery("select * from salaries;", Salary.class).getResultList();
+
+        System.out.println("pause");
         entityManager2.close();
         entityManagerFactory2.close();
 
