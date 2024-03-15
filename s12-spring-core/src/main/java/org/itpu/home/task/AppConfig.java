@@ -5,29 +5,30 @@ import org.springframework.context.annotation.Bean;
 
 public class AppConfig {
     @Bean
-    public Task task(@Qualifier("assignee") Employee arg1,
-                     @Qualifier("reviewer") Employee arg2) {
+    public Task task(@Qualifier("employee1") Employee assignee,
+                     @Qualifier("employee2") Employee reviewer) {
         Task task = new Task();
-        task.setAssignee(arg1);
-        task.setReviewer(arg2);
+        task.setAssignee(assignee);
+        task.setReviewer(reviewer);
         task.setDescription("New feature");
         return task;
     }
 
     @Bean
-    public Employee assignee() {
-        Employee assignee = new Employee();
-        assignee.setName("John Doe");
-        assignee.setPosition("Junior Software Engineer");
-        return assignee;
+    public Employee employee1() {
+        return getEmployee("John Doe", "Junior Software Engineer");
     }
 
     @Bean
-    public Employee reviewer() {
-        Employee reviewer = new Employee();
-        reviewer.setName("Emily Brown");
-        reviewer.setPosition("Senior Software Engineer");
-        return reviewer;
+    public Employee employee2() {
+        return getEmployee("Emily Brown", "Senior Software Engineer");
+    }
+
+    private Employee getEmployee(String name, String position) {
+        Employee employee = new Employee();
+        employee.setName(name);
+        employee.setPosition(position);
+        return employee;
     }
 
 }
