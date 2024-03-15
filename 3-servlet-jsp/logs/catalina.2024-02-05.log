@@ -1,0 +1,73 @@
+05-Feb-2024 10:06:02.452 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.85
+05-Feb-2024 10:06:02.475 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 5 2024 08:28:07 UTC
+05-Feb-2024 10:06:02.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.85.0
+05-Feb-2024 10:06:02.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+05-Feb-2024 10:06:02.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            11.0
+05-Feb-2024 10:06:02.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+05-Feb-2024 10:06:02.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+05-Feb-2024 10:06:02.477 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.11+9
+05-Feb-2024 10:06:02.477 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            AdoptOpenJDK
+05-Feb-2024 10:06:02.477 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp
+05-Feb-2024 10:06:02.478 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-dev-content/apache-tomcat-9.0.85
+05-Feb-2024 10:06:02.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-dev-content/apache-tomcat-9.0.85
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp/temp
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp/conf/logging.properties
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52204:/Applications/IntelliJ IDEA CE.app/Contents/bin
+05-Feb-2024 10:06:02.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+05-Feb-2024 10:06:02.584 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/Abbosbek_Makhamadaminov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+05-Feb-2024 10:06:03.866 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:06:03.927 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [2482] milliseconds
+05-Feb-2024 10:06:04.069 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Feb-2024 10:06:04.069 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.85]
+05-Feb-2024 10:06:04.078 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp/conf/Catalina/localhost/3-servlet-jsp.xml]
+05-Feb-2024 10:06:04.760 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp/conf/Catalina/localhost/3-servlet-jsp.xml] has finished in [681] ms
+05-Feb-2024 10:06:04.783 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:06:04.801 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [873] milliseconds
+05-Feb-2024 10:07:17.369 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:07:17.374 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Feb-2024 10:07:17.403 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:07:17.419 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:12:34.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.85
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 5 2024 08:28:07 UTC
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.85.0
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            11.0
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.11+9
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            AdoptOpenJDK
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp
+05-Feb-2024 10:12:34.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-dev-content/apache-tomcat-9.0.85
+05-Feb-2024 10:12:34.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Feb-2024 10:12:34.173 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-dev-content/apache-tomcat-9.0.85
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp/temp
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp/conf/logging.properties
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Feb-2024 10:12:34.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52429:/Applications/IntelliJ IDEA CE.app/Contents/bin
+05-Feb-2024 10:12:34.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+05-Feb-2024 10:12:34.180 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/Abbosbek_Makhamadaminov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+05-Feb-2024 10:12:34.990 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:12:35.070 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1388] milliseconds
+05-Feb-2024 10:12:35.340 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Feb-2024 10:12:35.341 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.85]
+05-Feb-2024 10:12:35.349 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp/conf/Catalina/localhost/3-servlet-jsp.xml]
+05-Feb-2024 10:12:36.204 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Feb-2024 10:12:36.301 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/Abbosbek_Makhamadaminov/Desktop/itpu/web-development-s4/3-servlet-jsp/conf/Catalina/localhost/3-servlet-jsp.xml] has finished in [951] ms
+05-Feb-2024 10:12:36.325 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:12:36.342 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1271] milliseconds
+05-Feb-2024 10:12:51.962 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:12:51.973 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Feb-2024 10:12:52.025 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Feb-2024 10:12:52.047 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
