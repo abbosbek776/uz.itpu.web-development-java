@@ -44,6 +44,7 @@ public class Main {
 
         // get values and print amount
         // amount of employees is down
+        System.out.println("\n after deletion");
         List<Employee> employees9 = entityManager.createNativeQuery("select * from employees;", Employee.class).getResultList();
         System.out.println("Amount of employees9.size() = " + employees9.size());
         // amount of profiles is down (cascade + orphan removal)
@@ -53,6 +54,7 @@ public class Main {
         List<Salary> salaries9 = entityManager.createNativeQuery("select * from salaries;", Salary.class).getResultList();
         System.out.println("Amount of salaries9.size() = " + salaries9.size());
 
+        System.out.println("\nProved that after removing single employee - cascade delete happened");
         entityManager.close();
         entityManagerFactory.close();
     }
