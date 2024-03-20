@@ -7,10 +7,11 @@
         <option value="$PROJECT_DIR$/s14-jpa/pom.xml" />
         <option value="$PROJECT_DIR$/lil-jpa-3-13/pom.xml" />
         <option value="$PROJECT_DIR$/s14-jpa-g2/pom.xml" />
+        <option value="$PROJECT_DIR$/s12-spring-core/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -36,8 +36,11 @@ SalaryRepositoryImpl implements SalaryRepository {
 
     @Override
     public Optional<Salary> getSalaryById(Long id) {
+        entityManager.getTransaction().begin();
         Salary salary = entityManager.find(Salary.class, id);
-        return salary != null ? Optional.of(salary) : Optional.empty();
+        Optional<Salary> res = salary != null ? Optional.of(salary) : Optional.empty();
+        entityManager.getTransaction().commit();
+        return res;
     }
 
     @Override

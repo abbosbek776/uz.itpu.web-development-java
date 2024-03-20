@@ -39,8 +39,11 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     @Override
     public Optional<Employee> getEmployeeById(Long id) {
+        entityManager.getTransaction().begin();
         Employee employee = entityManager.find(Employee.class, id);
-        return employee != null ? Optional.of(employee) : Optional.empty();
+        Optional<Employee> result = employee != null ? Optional.of(employee) : Optional.empty();
+        entityManager.getTransaction().commit();
+        return result;
     }
 
     @Override
