@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+
+<persistence-unit name="socialMediaPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+        <class>org.itpu.entity.Post</class>
+        <class>org.itpu.entity.Comment</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <!--            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:file:~/data/my-real-file-db-instance"/>-->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:my-in-memory-db-instance"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value="password"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+
+            <!-- Hibernate properties -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+
+            <property name="hibernate.jdbc.time_zone" value="UTC"/>
+            <property name="hibernate.show_sql" value="true"/>
+<!--            <property name="hibernate.format_sql" value="true"/>-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>
+
+        </properties>
+    </persistence-unit>
+</persistence>
