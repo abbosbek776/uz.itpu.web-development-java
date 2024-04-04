@@ -30,4 +30,5 @@ Run debug Main and Notice:
    5) on postByIdCopy = service.getPostById(1), notice again no database calls
    6) em.clear() - cleaning up persistance context
    7) postByIdNewCall = service.getPostById(1), since nothing is in context, hibernate calls select post by id
-   8) 
+8) Check module s16-hibernate-cache-2
+   1) run MainSimple quitly and read all comments and notice all messages in Console.
