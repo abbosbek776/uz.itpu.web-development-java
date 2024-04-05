@@ -25,7 +25,7 @@ public class MainSimple {
         session.save(user2);
         session.getTransaction().commit();
         session.close();
-        sessionFactory.getCache().evictAllRegions(); // clean up all cache
+        sessionFactory.getCache().evictAllRegions(); // clean up all cache levels
         System.out.println("Stats enabled=" + stats.isStatisticsEnabled());
         stats.setStatisticsEnabled(true);
         System.out.println("Stats enabled=" + stats.isStatisticsEnabled());
