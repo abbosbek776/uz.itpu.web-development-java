@@ -28,8 +28,8 @@ public class Main {
 
             jpaMidTermTaskSolution(em, service);
 
-            // check lazy loading
-            checkLazyLoading(em, service);
+//             first level cache in work
+            checkFirstLevelCacheDetected(em, service);
 
 
             System.out.println("EXIT");
@@ -57,7 +57,7 @@ public class Main {
         System.out.println("");
     }
 
-    private static void checkLazyLoading(EntityManager em, SocialMediaService service) {
+    private static void checkFirstLevelCacheDetected(EntityManager em, SocialMediaService service) {
         em.getTransaction().begin();
 
         Post post = em.find(Post.class, 1);
@@ -68,7 +68,11 @@ public class Main {
         Post postById = service.getPostById(1);
         Post postByIdCopy = service.getPostById(1);
         em.clear();
+        System.out.println();
         Post postByIdNewCall = service.getPostById(1);
+        Post postByIdNewCallCopy = service.getPostById(1);
+        Post postByIdNewCall2 = service.getPostById(2);
+        Post postByIdNewCallCopy2 = service.getPostById(2);
 
         em.clear();
         System.out.println("");
