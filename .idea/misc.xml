@@ -10,7 +10,15 @@
         <option value="$PROJECT_DIR$/s12-spring-core/pom.xml" />
         <option value="$PROJECT_DIR$/s16-hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/s16-hibernate-cache-2/pom.xml" />
+        <option value="$USER_HOME$/Downloads/hello-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/s18-spring-mvc/hello-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/s19-spring-mvc/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$USER_HOME$/Downloads/hello-mvc/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
