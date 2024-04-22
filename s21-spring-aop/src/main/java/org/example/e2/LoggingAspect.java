@@ -1,4 +1,4 @@
-package org.example;
+package org.example.e2;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -13,17 +13,12 @@ import java.util.logging.Logger;
 public class LoggingAspect {
     public static final Logger LOGGER = Logger.getLogger(LoggingAspect.class.getName());
 
-    @Pointcut("@annotation(Log)")
-    public void logPointcut(){
+    @Pointcut("execution(public void org.example.e2.LogicV2.perform())")
+    public void logPointcutWithExecution() {
     }
 
-    @Before("logPointcut()")
-    public void logBeforeAllMethodCallsAdvice(){
-        LOGGER.warning("Aspect Before");
-    }
-
-    @After("logPointcut()")
-    public void logAfterAllMethodCallsAdvice(){
-        LOGGER.warning("Aspect After");
+    @Before("logPointcutWithExecution()")
+    public void logMethodCallsWithExecutionAdvice() {
+        LOGGER.warning("In Aspect from execution");
     }
 }

@@ -1,9 +1,9 @@
-package org.example;
+package org.example.e1;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class Logic {
+public class LogicV1 {
 
     @Log
     public int count(int num) {

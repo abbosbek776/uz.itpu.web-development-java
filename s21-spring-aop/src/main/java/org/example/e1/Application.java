@@ -1,4 +1,4 @@
-package org.example;
+package org.example.e1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,7 +10,7 @@ public class Application {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 
-        Logic logic = context.getBean(Logic.class);
+        LogicV1 logic = context.getBean(LogicV1.class);
 
         logic.count(123);
         logic.textLength("12345");
