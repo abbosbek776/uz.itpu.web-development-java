@@ -14,7 +14,7 @@ public class LoggingAspect {
     public static final Logger LOGGER = Logger.getLogger(LoggingAspect.class.getName());
 
     @Pointcut("@annotation(Log)")
-    public void logPointcut(){
+    public void logPointcut() {
     }
 
     @Before("logPointcut()")

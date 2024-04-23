@@ -14,5 +14,7 @@ public class Application {
 
         logic.count(123);
         logic.textLength("12345");
+
+//        logic.newMethod();
     }
 }

@@ -8,4 +8,8 @@ public class LogicV6 {
     public String combineValues(String a, int b) {
         return a + b;
     }
+
+    public String combineValuesV2(String a, int b) {
+        return a + b;
+    }
 }

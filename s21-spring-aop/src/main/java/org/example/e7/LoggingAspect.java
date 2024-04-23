@@ -19,11 +19,14 @@ public class LoggingAspect {
 
     @Around("logPointcutWithArgs()")
     public void logMethodCallsWithArgsAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
-        LOGGER.warning("In Aspect from Args");
+        String methodName = joinPoint.getSignature().getName();
+        LOGGER.warning("method = " + methodName + " is called");
         for (int i = 0; i < joinPoint.getArgs().length; i++) {
             Object arg = joinPoint.getArgs()[i];
             LOGGER.warning("arg " + i + " value " + arg);
         }
+        System.out.println("before method");
         joinPoint.proceed();
+        System.out.println("after method");
     }
 }

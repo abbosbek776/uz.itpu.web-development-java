@@ -19,7 +19,7 @@ public class LoggingAspect {
 
     @Before("logPointcutWithArgs()")
     public void logMethodCallsWithArgsAdvice(JoinPoint joinPoint) {
-        LOGGER.warning("In Aspect from Args");
-        LOGGER.warning(joinPoint.getSignature().getName());
+        String methodName = joinPoint.getSignature().getName();
+        LOGGER.warning("method " + methodName + " is called");
     }
 }

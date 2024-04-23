@@ -14,5 +14,6 @@ public class Application {
 
         logic.perform();
         logic.textLength("asdasd");
+        logic.textLength("asdasd", 123);
     }
 }

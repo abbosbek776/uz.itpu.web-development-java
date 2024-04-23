@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class LoggingAspect {
     public static final Logger LOGGER = Logger.getLogger(LoggingAspect.class.getName());
 
-    // applied to methods of class LogicV5, which has public String and any name and any args
+    // applied to methods of class LogicV5, which has public String and any name and any args 1 or 255
     @Pointcut("within(org.example.e5.LogicV5) && execution(public String org.example.e5.LogicV5.*(..))")
     public void logPointcutWithArgs() {
     }

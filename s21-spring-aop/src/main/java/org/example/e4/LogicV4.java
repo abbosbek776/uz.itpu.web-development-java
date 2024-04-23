@@ -10,6 +10,11 @@ public class LogicV4 {
         return text.length();
     }
 
+    public int textLength(String text, int i) {
+        System.out.println("Logic#textLength()");
+        return text.length();
+    }
+
     public void perform() {
         System.out.println("Logic#perform()");
     }

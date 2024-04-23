@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 public class LogicV7 {
 
     public String combineValues(String a, int b) {
+        System.out.println("in method");
         return a + b;
     }
 }

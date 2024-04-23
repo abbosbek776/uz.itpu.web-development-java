@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 public class LoggingAspect {
     public static final Logger LOGGER = Logger.getLogger(LoggingAspect.class.getName());
 
+    //                              org.example.e4.LogicV4.textLength("asdasd");
     @Pointcut("execution(public int org.example.e4.LogicV4.textLength(String))")
     public void logPointcutWithArgs() {
     }

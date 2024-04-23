@@ -13,5 +13,6 @@ public class Application {
         LogicV6 logic = context.getBean(LogicV6.class);
 
         logic.combineValues("asd", 123);
+        logic.combineValuesV2("asd", 123);
     }
 }
