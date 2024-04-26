@@ -15,8 +15,10 @@ public class Application {
         UserDto userDto = new UserDto();
         userDto.setLogin("PII_login");
         userDto.setPassword("PII_password");
+
         UserDto returnedUser = someService.login(userDto);
-        System.out.println(returnedUser);
+
+        System.out.println("\nPROGRAM RESULT = " + returnedUser);
 
         System.out.println("=".repeat(40));
 

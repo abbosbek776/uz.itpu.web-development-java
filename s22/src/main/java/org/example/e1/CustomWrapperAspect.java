@@ -42,12 +42,12 @@ public class CustomWrapperAspect {
         Object[] args = pjp.getArgs();
         for (int i = 0; i < args.length; i++) {
             Object arg = args[i];
+            System.out.println("    arg " + i + " value " + arg);
             if (arg instanceof UserDto) {
                 UserDto userDto = (UserDto) arg;
                 userDto.setLogin("PII_login_aspect_mutate");
                 userDto.setPassword("PII_password_aspect_mutate");
             }
-            System.out.println("    arg " + i + " value " + arg);
         }
         System.out.println("2 - Caught method parameter = " + args);
 
