@@ -22,9 +22,9 @@ values ((SELECT customer_id FROM customers where name = 'Callahan Auto'), '200 W
 INSERT INTO users (username, password, enabled)
 values ('user', '{bcrypt}$2a$10$XlkdPQQhYcolx8bgp6nL3uNvDs8ZwDXA4KFaDencZsIhjMQO3j5lq', true);
 INSERT INTO users (username, password, enabled)
-values ('admin', '{bcrypt}$$2a$11$H6uUCdAW9KTK1DTnaDr5Be7kepZQb/ID35jDhx95Sa9k2Cb3zd7/2', true);
+values ('admin', '{bcrypt}$2a$10$wlhEAfw0XQi/yBgrd2kHNe983f/mOpDuVhNwWd8jqbCiq/zyrrU/G', true);
 INSERT INTO users (username, password, enabled)
-values ('admin1', '{bcrypt}$2a$12$IcZ80XFRhUDfh9mKXzBgyOonr8CIea48F.vV0tjGvJbMyLUg/PK7e', true);
+values ('admin1', '{bcrypt}$2a$10$3ddBs8uln5YD2ZF0.risCeczB/eaSyBnpWiwqsIeKj.htTktZD5SG', true);
 
 
 INSERT INTO authorities (username, authority)
@@ -32,4 +32,4 @@ values ('user', 'ROLE_USER');
 INSERT INTO authorities (username, authority)
 values ('admin', 'ROLE_USER');
 INSERT INTO authorities (username, authority)
-values ('admin', 'ROLE_ADMIN');
+values ('admin1', 'ROLE_ADMIN');
