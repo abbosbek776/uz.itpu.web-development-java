@@ -20,11 +20,11 @@ INSERT INTO orders (customer_id, order_info)
 values ((SELECT customer_id FROM customers where name = 'Callahan Auto'), '200 Widgets');
 
 INSERT INTO users (username, password, enabled)
-values ('user', '{bcrypt}$2a$10$XlkdPQQhYcolx8bgp6nL3uNvDs8ZwDXA4KFaDencZsIhjMQO3j5lq', true);
+values ('user', '{bcrypt}$2a$10$XlkdPQQhYcolx8bgp6nL3uNvDs8ZwDXA4KFaDencZsIhjMQO3j5lq', true); --password
 INSERT INTO users (username, password, enabled)
-values ('admin', '{bcrypt}$2a$10$wlhEAfw0XQi/yBgrd2kHNe983f/mOpDuVhNwWd8jqbCiq/zyrrU/G', true);
+values ('admin', '{bcrypt}$2a$10$wlhEAfw0XQi/yBgrd2kHNe983f/mOpDuVhNwWd8jqbCiq/zyrrU/G', true); --password
 INSERT INTO users (username, password, enabled)
-values ('admin1', '{bcrypt}$2a$10$3ddBs8uln5YD2ZF0.risCeczB/eaSyBnpWiwqsIeKj.htTktZD5SG', true);
+values ('admin1', '{bcrypt}$2a$10$3ddBs8uln5YD2ZF0.risCeczB/eaSyBnpWiwqsIeKj.htTktZD5SG', true); --admin
 
 
 INSERT INTO authorities (username, authority)
