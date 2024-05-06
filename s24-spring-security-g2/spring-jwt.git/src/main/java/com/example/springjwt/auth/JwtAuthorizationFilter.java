@@ -36,29 +36,27 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
         try {
             String accessToken = jwtUtil.resolveToken(request);
-            if (accessToken == null ) {
+            if (accessToken == null) {
                 filterChain.doFilter(request, response);
                 return;
             }
             System.out.println("token : "+accessToken);
             Claims claims = jwtUtil.resolveClaims(request);
 
-            if(claims != null & jwtUtil.validateClaims(claims)){
+            if (claims != null & jwtUtil.validateClaims(claims)){
                 String email = claims.getSubject();
                 System.out.println("email : "+email);
-                Authentication authentication =
-                        new UsernamePasswordAuthenticationToken(email,"",new ArrayList<>());
+                Authentication authentication = new UsernamePasswordAuthenticationToken(email,"",new ArrayList<>());
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             errorDetails.put("message", "Authentication Error");
             errorDetails.put("details",e.getMessage());
             response.setStatus(HttpStatus.FORBIDDEN.value());
             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
 
             mapper.writeValue(response.getWriter(), errorDetails);
-
         }
         filterChain.doFilter(request, response);
     }
