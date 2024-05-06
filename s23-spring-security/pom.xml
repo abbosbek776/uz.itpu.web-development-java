@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.frankmoley.lil</groupId>
-    <artifactId>admin-web</artifactId>
+    <artifactId>s23-spring-security</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>admin-web</name>
     <description>admin-web</description>

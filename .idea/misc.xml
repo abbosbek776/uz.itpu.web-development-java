@@ -15,9 +15,12 @@
         <option value="$PROJECT_DIR$/s19-spring-mvc/pom.xml" />
         <option value="$PROJECT_DIR$/s21-spring-aop/pom.xml" />
         <option value="$PROJECT_DIR$/s22/pom.xml" />
-        <option value="$PROJECT_DIR$/s23-spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/s25-spring-rest/pom.xml" />
         <option value="$PROJECT_DIR$/s18-spring-mvc-practical-task/pom.xml" />
+        <option value="$PROJECT_DIR$/s24-spring-security-g2/admin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/s24-spring-security-g2/admin-web/pom.xml" />
+        <option value="$PROJECT_DIR$/s23-spring-security/pom.xml" />
+        <option value="$PROJECT_DIR$/s24-spring-security-g2/spring-jwt.git/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
