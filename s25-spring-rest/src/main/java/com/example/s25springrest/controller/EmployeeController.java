@@ -9,38 +9,43 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(name = "employees")
+@RequestMapping("employees")
 public class EmployeeController {
+
     @Autowired
     private EmployeeService employeeService;
 
     // Aggregate root
     // tag::get-aggregate-root[]
-    @GetMapping("/employees")
+    @GetMapping
     List<Employee> all() {
         return employeeService.getAll();
     }
     // end::get-aggregate-root[]
 
-    @PostMapping("/employees")
-    Employee newEmployee(@RequestBody Employee newEmployee) {
-        return employeeService.saveNewEmployee(newEmployee);
-    }
-
     // Single item
-
-    @GetMapping("/employees/{id}")
+    @GetMapping("/{id}")
     Employee one(@PathVariable Long id) throws EmployeeNotFoundException {
         return employeeService.getById(id);
     }
 
-    @PutMapping("/employees/{id}")
+    @PostMapping
+    Employee newEmployee(@RequestBody Employee newEmployee) {
+        return employeeService.saveNewEmployee(newEmployee);
+    }
+
+    @PutMapping("/{id}")
     Employee replaceEmployee(@RequestBody Employee newEmployee, @PathVariable Long id) {
         return employeeService.updateById(id, newEmployee);
     }
 
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("/{id}")
     void deleteEmployee(@PathVariable Long id) {
         employeeService.deleteById(id);
+    }
+
+    @DeleteMapping("/name/{name}")
+    void deleteEmployee(@PathVariable String name) {
+        employeeService.deleteByName(name);
     }
 }

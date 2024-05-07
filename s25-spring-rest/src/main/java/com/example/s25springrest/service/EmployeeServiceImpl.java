@@ -5,6 +5,7 @@ import com.example.s25springrest.exception.EmployeeNotFoundException;
 import com.example.s25springrest.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -47,5 +48,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void deleteById(Long id) {
         employeeRepository.deleteById(id);
+    }
+
+    @Transactional
+    @Override
+    public void deleteByName(String name) {
+        employeeRepository.deleteByName(name);
     }
 }
