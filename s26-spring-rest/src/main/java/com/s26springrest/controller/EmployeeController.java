@@ -1,7 +1,6 @@
 package com.s26springrest.controller;
 
 import com.s26springrest.entity.Employee;
-import com.s26springrest.exception.EmployeeNotFoundException;
 import com.s26springrest.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +24,7 @@ public class EmployeeController {
 
     // Single item
     @GetMapping("/{id}")
-    Employee one(@PathVariable Long id) throws EmployeeNotFoundException {
+    Employee one(@PathVariable Long id) {
         return employeeService.getById(id);
     }
 

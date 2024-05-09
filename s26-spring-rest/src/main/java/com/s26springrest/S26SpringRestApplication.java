@@ -16,15 +16,22 @@ public class S26SpringRestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(S26SpringRestApplication.class, args);
 
+		System.out.println("https://spring.io/guides/tutorials/rest");
+		System.out.println();
 		System.out.println("http://localhost:8080/employees");
+		System.out.println("http://localhost:8080/employees/v2");
+		System.out.println("http://localhost:8080/employees/v3");
 	}
 
-	@Bean
-	public CommandLineRunner initDatabase(EmployeeRepository repository) {
-		return args -> {
-			log.info("Preloading " + repository.save(new Employee("Bilbo Baggins", "burglar")));
-			log.info("Preloading " + repository.save(new Employee("Frodo Baggins", "thief")));
-			log.info("Preloading " + repository.save(new Employee("tester", "tester")));
-		};
-	}
+//	@Bean
+//	public CommandLineRunner initDatabase(EmployeeRepository repository) {
+//		return args -> {
+//			log.info("Preloading " + repository.save(new Employee("Bilbo Baggins", "burglar")));
+//			log.info("Preloading " + repository.save(new Employee("Frodo Baggins", "thief")));
+//			log.info("Preloading " + repository.save(new Employee("tester", "tester")));
+//			log.info("Preloading " + repository.save(new Employee("Bilbo", "Baggins", "burglar")));
+//			log.info("Preloading " + repository.save(new Employee("Frodo", "Baggins", "thief")));
+//			log.info("Preloading " + repository.save(new Employee("tester", "tessstr", "tester")));
+//		};
+//	}
 }
