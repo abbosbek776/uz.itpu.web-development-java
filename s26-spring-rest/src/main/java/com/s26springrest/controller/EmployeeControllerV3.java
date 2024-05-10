@@ -34,7 +34,7 @@ public class EmployeeControllerV3 {
                 .map(employeeModelAssembler::toModel)
                 .collect(Collectors.toList());
 
-        return CollectionModel.of(employees, linkTo(methodOn(EmployeeController.class).all()).withSelfRel());
+        return CollectionModel.of(employees, linkTo(methodOn(EmployeeControllerV3.class).all()).withSelfRel());
     }
 
     @GetMapping("/{id}")
