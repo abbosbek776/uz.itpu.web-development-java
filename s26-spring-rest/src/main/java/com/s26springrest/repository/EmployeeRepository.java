@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
-    void deleteByName(String name);
+    void deleteByFirstName(String firstName);
 }

@@ -4,6 +4,10 @@ import com.s26springrest.entity.Employee;
 import com.s26springrest.hateoas.EmployeeModelAssembler;
 import com.s26springrest.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,19 +38,19 @@ public class EmployeeControllerV2 {
 
         return EntityModel.of(employee,
                 linkTo(methodOn(EmployeeControllerV2.class).one(id)).withSelfRel(),
-                linkTo(methodOn(EmployeeControllerV2.class).all()).withRel("employees"));
+                linkTo(methodOn(EmployeeControllerV2.class).all(PageRequest.of(1, 1))).withRel("employees"));
     }
 
-    @GetMapping
-    public CollectionModel<EntityModel<Employee>> all() {
-
-        List<EntityModel<Employee>> employees = employeeService.getAll().stream()
+    @GetMapping // http://localhost:8080/employees/v2?page=0&size=2
+    public CollectionModel<EntityModel<Employee>> all(Pageable pageable) {
+        Page<Employee> page = employeeService.getPageable(pageable);
+        List<EntityModel<Employee>> employees = page.getContent().stream()
                 .map(employee -> EntityModel.of(employee,
                         linkTo(methodOn(EmployeeControllerV2.class).one(employee.getId())).withSelfRel(),
-                        linkTo(methodOn(EmployeeControllerV2.class).all()).withRel("employees")))
+                        linkTo(methodOn(EmployeeControllerV2.class).all(pageable)).withRel("employees")))
                 .collect(Collectors.toList());
 
-        return CollectionModel.of(employees, linkTo(methodOn(EmployeeControllerV2.class).all()).withSelfRel());
+        return CollectionModel.of(employees, linkTo(methodOn(EmployeeControllerV2.class).all(pageable)).withSelfRel());
     }
 
 }

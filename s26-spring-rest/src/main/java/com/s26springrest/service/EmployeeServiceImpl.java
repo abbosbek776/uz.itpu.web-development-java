@@ -4,6 +4,8 @@ import com.s26springrest.entity.Employee;
 import com.s26springrest.exception.EmployeeNotFoundException;
 import com.s26springrest.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +20,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public List<Employee> getAll() {
         return employeeRepository.findAll();
+    }
+
+    @Override
+    public Page<Employee> getPageable(Pageable pageable) {
+        return employeeRepository.findAll(pageable);
     }
 
     @Override
@@ -52,7 +59,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Transactional
     @Override
-    public void deleteByName(String name) {
-        employeeRepository.deleteByName(name);
+    public void deleteByFirstName(String firstName) {
+        employeeRepository.deleteByFirstName(firstName);
     }
 }

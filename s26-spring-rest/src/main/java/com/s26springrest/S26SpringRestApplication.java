@@ -16,6 +16,9 @@ public class S26SpringRestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(S26SpringRestApplication.class, args);
 
+		System.out.println("http://localhost:8080/test");
+		System.out.println();
+		System.out.println();
 		System.out.println("https://spring.io/guides/tutorials/rest");
 		System.out.println();
 		System.out.println("http://localhost:8080/employees");
