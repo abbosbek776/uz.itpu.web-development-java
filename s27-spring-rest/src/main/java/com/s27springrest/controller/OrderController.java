@@ -20,21 +20,20 @@ import java.util.stream.Collectors;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-@RestController("orders")
+@RestController
+@RequestMapping("orders")
 public class OrderController {
 
     private final OrderRepository orderRepository;
     private final OrderModelAssembler assembler;
 
     public OrderController(OrderRepository orderRepository, OrderModelAssembler assembler) {
-
         this.orderRepository = orderRepository;
         this.assembler = assembler;
     }
 
     @GetMapping
     public CollectionModel<EntityModel<Order>> all() {
-
         List<EntityModel<Order>> orders = orderRepository.findAll().stream()
                 .map(assembler::toModel)
                 .collect(Collectors.toList());
@@ -45,7 +44,6 @@ public class OrderController {
 
     @GetMapping("/{id}")
     public EntityModel<Order> one(@PathVariable Long id) {
-
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException(id));
 
@@ -54,7 +52,6 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<EntityModel<Order>> newOrder(@RequestBody Order order) {
-
         order.setStatus(Status.IN_PROGRESS);
         Order newOrder = orderRepository.save(order);
 
@@ -65,7 +62,6 @@ public class OrderController {
 
     @PutMapping("/{id}/complete")
     public ResponseEntity<?> complete(@PathVariable Long id) {
-
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException(id));
 
@@ -84,7 +80,6 @@ public class OrderController {
 
     @DeleteMapping("/{id}/cancel")
     public ResponseEntity<?> cancel(@PathVariable Long id) {
-
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException(id));
 

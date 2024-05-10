@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/s23-spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/s24-spring-security-g2/spring-jwt.git/pom.xml" />
         <option value="$PROJECT_DIR$/s26-spring-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/s27-spring-rest/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
