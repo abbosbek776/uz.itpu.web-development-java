@@ -19,7 +19,19 @@ public class S27SpringRestApplication {
 		System.out.println();
 		System.out.println("http://localhost:8080/employees");
 		System.out.println("http://localhost:8080/employees/v2");
+		System.out.println("http://localhost:8080/employees/v2?page=0&size=5");
+		System.out.println("http://localhost:8080/swagger-ui/index.html#/employee-controller-v-2/all_3");
+		System.out.println("{\n" +
+				"  \"page\": 0,\n" +
+				"  \"size\": 3,\n" +
+				"  \"sort\": [\"role,asc\", \"firstName,desc\"]\n" +
+				"}");
 		System.out.println("http://localhost:8080/employees/v3");
+		System.out.println();
+		System.out.println("SWAGGER ?!");
+		System.out.println("https://springdoc.org/#getting-started");
+		System.out.println("http://localhost:8080/v3/api-docs");
+		System.out.println("http://localhost:8080/swagger-ui/index.html");
 	}
 
 //	@Bean

@@ -3,6 +3,7 @@ package com.s27springrest.controller;
 import com.s27springrest.dto.TestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,16 +28,18 @@ public class TestController {
         return sb.toString();
     }
 
+    @GetMapping(path = "/cmn", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+    public TestResponse getTestResponseAsCommon(@RequestHeader(HttpHeaders.ACCEPT) String accept) {
+        return new TestResponse(accept, "TEST COMMON TXT");
+    }
+
     @GetMapping(path = "/json", produces = MediaType.APPLICATION_JSON_VALUE)
-    public TestResponse getTestResponseAsJson() {
-        return new TestResponse("TEST JSON TXT");
+    public TestResponse getTestResponseAsJson(@RequestHeader(HttpHeaders.ACCEPT) String accept) {
+        return new TestResponse(accept, "TEST JSON TXT");
     }
 
     @GetMapping(path = "/xml", produces = MediaType.APPLICATION_XML_VALUE)
-    public ResponseEntity<TestResponse> getTestResponseAsXml() {
-//        return new TestResponse("TEST TXT");
-        return ResponseEntity.ok()
-                .contentType(MediaType.APPLICATION_XML)
-                .body(new TestResponse("TEST XML TXT"));
+    public TestResponse getTestResponseAsXml(@RequestHeader(HttpHeaders.ACCEPT) String accept) {
+        return new TestResponse(accept, "TEST XML TXT");
     }
 }
