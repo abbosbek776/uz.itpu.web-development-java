@@ -1,0 +1,17 @@
+spring:
+  application:
+    name=S29SpringBoot
+  sql:
+    init:
+      mode: always
+  data-source:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/spring_boot_demo
+    username: postgres
+    password: admin
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
